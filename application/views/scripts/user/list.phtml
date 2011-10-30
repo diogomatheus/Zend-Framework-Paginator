@@ -1,0 +1,10 @@
+<ul>
+<?php if(sizeof($this->paginator)): ?>
+    <?php foreach($this->paginator as $user): ?>
+    <li><?php echo $this->escape($user->name); ?></li>
+    <?php endforeach; ?>
+<?php else: ?>
+    <li>Nenhum usuário encontrado.</li>
+<?php endif; ?>
+</ul>
+<?php echo $this->paginator; ?>
